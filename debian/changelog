@@ -1,3 +1,10 @@
+byzanz (0.3.0+git20160312-5) unstable; urgency=medium
+
+  * Declare compliance with Debian Policy 4.6.0.
+  * Remove debian/watch because the upstream project is dead.
+
+ -- Markus Koschany <apo@debian.org>  Mon, 15 Nov 2021 12:58:37 +0100
+
 byzanz (0.3.0+git20160312-4) unstable; urgency=medium
 
   * Switch to debhelper-compat = 13.
