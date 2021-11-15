@@ -11,7 +11,7 @@ Build-Depends:
  libgstreamer1.0-dev,
  libgtk-3-dev,
  libx11-dev
-Standards-Version: 4.5.1
+Standards-Version: 4.6.0
 Homepage: https://gitlab.gnome.org/Archive/byzanz
 Vcs-Git: https://salsa.debian.org/debian/byzanz.git
 Vcs-Browser: https://salsa.debian.org/debian/byzanz
