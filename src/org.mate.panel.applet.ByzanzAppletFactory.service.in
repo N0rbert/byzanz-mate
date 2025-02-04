@@ -1,3 +1,3 @@
 [D-BUS Service]
-Name=org.gnome.panel.applet.ByzanzAppletFactory
+Name=org.mate.panel.applet.ByzanzAppletFactory
 Exec=@LIBEXECDIR@/byzanz-applet

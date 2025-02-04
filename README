@@ -1,3 +1,31 @@
+In 2025 Byzanz is reimplemented as an applet for modern
+MATE Panel of traditional MATE Desktop Environment.
+
+The applet was tested on Debian 10 (buster), 11 (bullseye), 12 (bookworm) and
+upcoming 13 (trixie).
+
+To build the deb-package locally use commands below:
+
+```
+cd ~/Downloads
+git clone https://github.com/N0rbert/byzanz-mate
+cd byzanz-mate
+sudo apt-get install debhelper mate-common libmate-panel-applet-dev libcairo2-dev \
+libglib2.0-dev libgstreamer-plugins-base1.0-dev libgstreamer1.0-dev libgtk-3-dev libx11-dev
+dpkg-buildpackage -uc -us -b
+sudo apt-get install ../byzanz_0.3.0+git202*.deb
+```
+
+Then do right mouse click on the MATE Panel, click "Add to Panel", search for "Desktop
+Recorder" and then click "Add". Click on the Recorder button to specify output file
+and format and to start recording, stop recording by clicking Stop button. 
+Please note that "Record audio" checkbox should be unchecked for GIF format.
+
+---
+Historical part of the README file is below, it is unchanged and 
+came from https://salsa.debian.org/debian/byzanz .
+---
+
 "byzanz is awesome. i love byzanz. to me it represents pragmatic utility over 
  idealistic artistry"
    -- Mike Hearn

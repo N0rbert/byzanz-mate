@@ -1,3 +1,10 @@
+byzanz (0.3.0+git20250204-1) unstable; urgency=medium
+
+  * Adapted old Byzanz applet for GNOME 2 Panel for modern
+    MATE Panel of traditional MATE Desktop Environment.
+
+ -- Norbert X <nrbrtx@gmail.com>  Tue, 4 Feb 2025 13:33:37 +0100
+
 byzanz (0.3.0+git20160312-5) unstable; urgency=medium
 
   * Declare compliance with Debian Policy 4.6.0.

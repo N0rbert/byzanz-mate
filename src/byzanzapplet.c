@@ -21,7 +21,8 @@
 
 #include <unistd.h>
 
-#include <panel-applet.h>
+#include <mate-panel-applet.h>
+#include <mate-panel-applet-gsettings.h>
 #include <gio/gio.h>
 #include <glib/gstdio.h>
 #include "paneltogglebutton.h"
@@ -34,7 +35,7 @@
 static GQuark index_quark = 0;
 
 typedef struct {
-  PanelApplet *		applet;		/* the applet we manage */
+  MatePanelApplet *		applet;		/* the applet we manage */
 
   GtkWidget *		button;		/* recording button */
   GtkWidget *		image;		/* image displayed in button */
@@ -372,7 +373,7 @@ static const GtkActionEntry byzanz_menu_actions [] = {
 };
 
 static gboolean
-byzanz_applet_fill (PanelApplet *applet, const gchar *iid, gpointer data)
+byzanz_applet_fill (MatePanelApplet *applet, const gchar *iid, gpointer data)
 {
   AppletPrivate *priv;
   GtkActionGroup *action_group;
@@ -382,7 +383,7 @@ byzanz_applet_fill (PanelApplet *applet, const gchar *iid, gpointer data)
   if (!index_quark)
     index_quark = g_quark_from_static_string ("Byzanz-Index");
 #ifdef GETTEXT_PACKAGE
-  bindtextdomain (GETTEXT_PACKAGE, GNOMELOCALEDIR);
+  bindtextdomain (GETTEXT_PACKAGE, MATELOCALEDIR);
   bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
   textdomain (GETTEXT_PACKAGE);
 #endif
@@ -391,12 +392,12 @@ byzanz_applet_fill (PanelApplet *applet, const gchar *iid, gpointer data)
 
   priv = g_new0 (AppletPrivate, 1);
   priv->applet = applet;
-  priv->settings = panel_applet_settings_new (applet, "org.gnome.byzanz.applet");
+  priv->settings = mate_panel_applet_settings_new (applet, "org.mate.byzanz.applet");
 
   g_signal_connect (applet, "destroy", G_CALLBACK (destroy_applet), priv);
-  panel_applet_add_preferences (applet, "/schemas/apps/byzanz-applet/prefs",
-      NULL);
-  panel_applet_set_flags (applet, PANEL_APPLET_EXPAND_MINOR);
+  /*panel_applet_add_preferences (applet, "/schemas/apps/byzanz-applet/prefs",
+      NULL);//FIXME*/
+  mate_panel_applet_set_flags (applet, MATE_PANEL_APPLET_EXPAND_MINOR);
   action_group = gtk_action_group_new ("Byzanz Applet Actions");
 #ifdef GETTEXT_PACKAGE
   gtk_action_group_set_translation_domain (action_group, GETTEXT_PACKAGE);
@@ -406,7 +407,7 @@ byzanz_applet_fill (PanelApplet *applet, const gchar *iid, gpointer data)
 				G_N_ELEMENTS (byzanz_menu_actions),
 				priv);
   ui_path = g_build_filename (BYZANZ_MENU_UI_DIR, "byzanzapplet.xml", NULL);
-  panel_applet_setup_menu_from_file (PANEL_APPLET (applet),
+  mate_panel_applet_setup_menu_from_file (MATE_PANEL_APPLET (applet),
 				     ui_path, action_group);
   g_free (ui_path);
   g_object_unref (action_group);
@@ -422,7 +423,7 @@ byzanz_applet_fill (PanelApplet *applet, const gchar *iid, gpointer data)
   gtk_container_add (GTK_CONTAINER (priv->button), priv->image);
   g_signal_connect (priv->button, "toggled", G_CALLBACK (button_clicked_cb), priv);
   gtk_container_add (GTK_CONTAINER (priv->applet), priv->button);
-  panel_applet_set_background_widget (applet, priv->button);
+  mate_panel_applet_set_background_widget (applet, priv->button);
 
   byzanz_applet_update (priv);
   gtk_widget_show_all (GTK_WIDGET (applet));
@@ -430,8 +431,9 @@ byzanz_applet_fill (PanelApplet *applet, const gchar *iid, gpointer data)
   return TRUE;
 }
 
-PANEL_APPLET_OUT_PROCESS_FACTORY ("ByzanzAppletFactory",
+MATE_PANEL_APPLET_OUT_PROCESS_FACTORY ("ByzanzAppletFactory",
 				  PANEL_TYPE_APPLET,
+				  "ByzanzApplet",
 				  byzanz_applet_fill,
 				  NULL)
 

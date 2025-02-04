@@ -44,7 +44,7 @@ msgid "All files"
 msgstr "Všechny soubory"
 
 #: ../src/byzanzapplet.c:291
-#: ../src/org.gnome.byzanz.applet.gschema.xml.in.in.h:5 ../src/record.c:40
+#: ../src/org.mate.byzanz.applet.gschema.xml.in.in.h:5 ../src/record.c:40
 msgid "Record audio"
 msgstr "Nahrávat zvuk"
 
@@ -130,19 +130,19 @@ msgstr "Nejedná se o nahrávání Byzanz"
 msgid "Unsupported byte order"
 msgstr "Nepodporované pořadí bajtů"
 
-#: ../src/org.gnome.byzanz.applet.gschema.xml.in.in.h:1
+#: ../src/org.mate.byzanz.applet.gschema.xml.in.in.h:1
 msgid "Save filename"
 msgstr "Název souboru pro ukládání"
 
-#: ../src/org.gnome.byzanz.applet.gschema.xml.in.in.h:2
+#: ../src/org.mate.byzanz.applet.gschema.xml.in.in.h:2
 msgid "URI for the filename Byzanz will suggest when starting a recording."
 msgstr "URI názvu souboru, které Byzanz navrhne při spuštění nahrávání."
 
-#: ../src/org.gnome.byzanz.applet.gschema.xml.in.in.h:3
+#: ../src/org.mate.byzanz.applet.gschema.xml.in.in.h:3
 msgid "Recording method"
 msgstr "Metoda nahrávání"
 
-#: ../src/org.gnome.byzanz.applet.gschema.xml.in.in.h:4
+#: ../src/org.mate.byzanz.applet.gschema.xml.in.in.h:4
 msgid ""
 "Use this method as the default method for recording. Must be one of \"screen"
 "\" for recording the whole screen, \"area\" for selecting an area or \"window"
@@ -152,7 +152,7 @@ msgstr ""
 "„screen“ pro nahrávání celé obrazovky, „area“ pro nahrávání vybrané oblasti "
 "nebo „window“ pro nahrávání vybraného okna."
 
-#: ../src/org.gnome.byzanz.applet.gschema.xml.in.in.h:6
+#: ../src/org.mate.byzanz.applet.gschema.xml.in.in.h:6
 msgid ""
 "If set, Byzanz will record audio from the default audio device if the format "
 "supports it. This allows narrating along with the recording."

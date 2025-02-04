@@ -41,9 +41,9 @@ po/POTFILES
 po/stamp-it
 src/ByzanzApplet.server
 src/ByzanzApplet.server.in
-src/org.gnome.ByzanzApplet.panel-applet
-src/org.gnome.ByzanzApplet.panel-applet.in
-src/org.gnome.panel.applet.ByzanzAppletFactory.service
+src/org.mate.ByzanzApplet.mate-panel-applet
+src/org.mate.ByzanzApplet.mate-panel-applet.in
+src/org.mate.panel.applet.ByzanzAppletFactory.service
 src/byzanz-applet
 src/byzanz-playback
 src/byzanz-record

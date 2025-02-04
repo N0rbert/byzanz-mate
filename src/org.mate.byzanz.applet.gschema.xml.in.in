@@ -1,5 +1,5 @@
 <schemalist gettext-domain="@GETTEXT_PACKAGE@">
-  <schema id="org.gnome.byzanz.applet">
+  <schema id="org.mate.byzanz.applet">
 
     <key name="save-filename" type="s">
       <default>''</default>

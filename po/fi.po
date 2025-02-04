@@ -45,7 +45,7 @@ msgid "All files"
 msgstr "Kaikki tiedostot"
 
 #: ../src/byzanzapplet.c:293
-#: ../src/org.gnome.byzanz.applet.gschema.xml.in.in.h:5 ../src/record.c:42
+#: ../src/org.mate.byzanz.applet.gschema.xml.in.in.h:5 ../src/record.c:42
 #| msgid "Record _Window"
 msgid "Record audio"
 msgstr "Tallenna äänet"
@@ -136,19 +136,19 @@ msgstr "Ei Byzanz-nauhoitus"
 msgid "Unsupported byte order"
 msgstr ""
 
-#: ../src/org.gnome.byzanz.applet.gschema.xml.in.in.h:1
+#: ../src/org.mate.byzanz.applet.gschema.xml.in.in.h:1
 msgid "Save filename"
 msgstr ""
 
-#: ../src/org.gnome.byzanz.applet.gschema.xml.in.in.h:2
+#: ../src/org.mate.byzanz.applet.gschema.xml.in.in.h:2
 msgid "URI for the filename Byzanz will suggest when starting a recording."
 msgstr ""
 
-#: ../src/org.gnome.byzanz.applet.gschema.xml.in.in.h:3
+#: ../src/org.mate.byzanz.applet.gschema.xml.in.in.h:3
 msgid "Recording method"
 msgstr "Tallennustapa"
 
-#: ../src/org.gnome.byzanz.applet.gschema.xml.in.in.h:4
+#: ../src/org.mate.byzanz.applet.gschema.xml.in.in.h:4
 msgid ""
 "Use this method as the default method for recording. Must be one of \"screen"
 "\" for recording the whole screen, \"area\" for selecting an area or \"window"
@@ -158,7 +158,7 @@ msgstr ""
 "\"screen\" (nauhoittaa koko näytön), \"area\" (nauhoittaa alueen) tai "
 "\"window\" (nauhoittaa valitun ikkunan)."
 
-#: ../src/org.gnome.byzanz.applet.gschema.xml.in.in.h:6
+#: ../src/org.mate.byzanz.applet.gschema.xml.in.in.h:6
 msgid ""
 "If set, Byzanz will record audio from the default audio device if the format "
 "supports it. This allows narrating along with the recording."

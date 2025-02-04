@@ -40,7 +40,7 @@ msgid "All files"
 msgstr "Alla filer"
 
 #: ../src/byzanzapplet.c:291
-#: ../src/org.gnome.byzanz.applet.gschema.xml.in.in.h:5 ../src/record.c:40
+#: ../src/org.mate.byzanz.applet.gschema.xml.in.in.h:5 ../src/record.c:40
 msgid "Record audio"
 msgstr "Spela in ljud"
 
@@ -129,19 +129,19 @@ msgstr "Inte en Byzanz-inspelning"
 msgid "Unsupported byte order"
 msgstr "Byteordningen stöds inte"
 
-#: ../src/org.gnome.byzanz.applet.gschema.xml.in.in.h:1
+#: ../src/org.mate.byzanz.applet.gschema.xml.in.in.h:1
 msgid "Save filename"
 msgstr "Filnamn för sparning"
 
-#: ../src/org.gnome.byzanz.applet.gschema.xml.in.in.h:2
+#: ../src/org.mate.byzanz.applet.gschema.xml.in.in.h:2
 msgid "URI for the filename Byzanz will suggest when starting a recording."
 msgstr "URI för filnamnet som Byzanz ska föreslå när en inspelning påbörjas."
 
-#: ../src/org.gnome.byzanz.applet.gschema.xml.in.in.h:3
+#: ../src/org.mate.byzanz.applet.gschema.xml.in.in.h:3
 msgid "Recording method"
 msgstr "Inspelningsmetod"
 
-#: ../src/org.gnome.byzanz.applet.gschema.xml.in.in.h:4
+#: ../src/org.mate.byzanz.applet.gschema.xml.in.in.h:4
 msgid ""
 "Use this method as the default method for recording. Must be one of \"screen"
 "\" for recording the whole screen, \"area\" for selecting an area or \"window"
@@ -151,7 +151,7 @@ msgstr ""
 "\"screen\" för inspelning av hela skärmen, \"area\" för markering av ett "
 "område eller \"window\" för att välja ett fönster."
 
-#: ../src/org.gnome.byzanz.applet.gschema.xml.in.in.h:6
+#: ../src/org.mate.byzanz.applet.gschema.xml.in.in.h:6
 msgid ""
 "If set, Byzanz will record audio from the default audio device if the format "
 "supports it. This allows narrating along with the recording."

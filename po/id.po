@@ -41,7 +41,7 @@ msgid "All files"
 msgstr "Semua berkas"
 
 #: ../src/byzanzapplet.c:293
-#: ../src/org.gnome.byzanz.applet.gschema.xml.in.in.h:5 ../src/record.c:42
+#: ../src/org.mate.byzanz.applet.gschema.xml.in.in.h:5 ../src/record.c:42
 msgid "Record audio"
 msgstr "Rekam suara"
 
@@ -127,21 +127,21 @@ msgstr "Bukan suatu rekaman Byzanz"
 msgid "Unsupported byte order"
 msgstr "Urutan byte tak didukung"
 
-#: ../src/org.gnome.byzanz.applet.gschema.xml.in.in.h:1
+#: ../src/org.mate.byzanz.applet.gschema.xml.in.in.h:1
 msgid "Save filename"
 msgstr "Nama berkas penyimpanan"
 
-#: ../src/org.gnome.byzanz.applet.gschema.xml.in.in.h:2
+#: ../src/org.mate.byzanz.applet.gschema.xml.in.in.h:2
 msgid "URI for the filename Byzanz will suggest when starting a recording."
 msgstr ""
 "URI bagi nama berkas yang akan disarankan Byzanz ketika memulai suatu "
 "rekaman."
 
-#: ../src/org.gnome.byzanz.applet.gschema.xml.in.in.h:3
+#: ../src/org.mate.byzanz.applet.gschema.xml.in.in.h:3
 msgid "Recording method"
 msgstr "Metoda perekaman"
 
-#: ../src/org.gnome.byzanz.applet.gschema.xml.in.in.h:4
+#: ../src/org.mate.byzanz.applet.gschema.xml.in.in.h:4
 msgid ""
 "Use this method as the default method for recording. Must be one of \"screen"
 "\" for recording the whole screen, \"area\" for selecting an area or \"window"
@@ -151,7 +151,7 @@ msgstr ""
 "satu \"layar\"  untuk merekam seluruh layar, \"area\" untuk memilih suatu "
 "area atau \"jendela\" untuk memilih suatu jendela."
 
-#: ../src/org.gnome.byzanz.applet.gschema.xml.in.in.h:6
+#: ../src/org.mate.byzanz.applet.gschema.xml.in.in.h:6
 msgid ""
 "If set, Byzanz will record audio from the default audio device if the format "
 "supports it. This allows narrating along with the recording."

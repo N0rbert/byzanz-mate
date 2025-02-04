@@ -24,8 +24,8 @@ Copyright: 2005-2013, Benjamin Otte <otte@gnome.org>
 License: LGPL-3+
 
 Files: src/Makefile.am
-       src/org.gnome.ByzanzApplet.panel-applet.in.in
-       src/org.gnome.panel.applet.ByzanzAppletFactory.service.in
+       src/org.mate.ByzanzApplet.mate-panel-applet.in.in
+       src/org.mate.panel.applet.ByzanzAppletFactory.service.in
        src/paneltogglebutton.c
        src/paneltogglebutton.h
        src/screenshot-utils.c

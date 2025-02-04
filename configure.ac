@@ -27,7 +27,7 @@ AC_SUBST(GETTEXT_PACKAGE)
 AC_DEFINE_UNQUOTED([GETTEXT_PACKAGE], "$GETTEXT_PACKAGE",
                    [gettext package name])
 AM_GLIB_GNU_GETTEXT
-AM_GLIB_DEFINE_LOCALEDIR(GNOMELOCALEDIR)
+AM_GLIB_DEFINE_LOCALEDIR(MATELOCALEDIR)
 
 
 AC_PROG_CC
@@ -67,7 +67,7 @@ GLIB_GSETTINGS
 
 CAIRO_REQ="1.10"
 GTK_REQ="3.0.0"
-APPLET_REQ="2.91.91"
+APPLET_REQ="1.20.4"
 XDAMAGE_REQ="1.0"
 GIO_REQ="2.35"
 
@@ -75,13 +75,10 @@ PKG_CHECK_MODULES(GTK, cairo >= $CAIRO_REQ gtk+-3.0 >= $GTK_REQ x11 gio-2.0 >= $
 
 PKG_CHECK_MODULES(XDAMAGE, xdamage >= $XDAMAGE_REQ)
 
-LIBPANEL_APPLET="libpanelapplet-4.0"
+LIBPANEL_APPLET="libmatepanelapplet-4.0"
 PKG_CHECK_MODULES(APPLET, $LIBPANEL_APPLET >= $APPLET_REQ,
                   have_applet=yes, have_applet=no)
 AM_CONDITIONAL(HAVE_APPLET, [test x$have_applet = xyes])
-AS_IF([test x$have_applet = xyes],
-      [appletdir=`$PKG_CONFIG --variable=libpanel_applet_dir $LIBPANEL_APPLET`
-       AC_SUBST(appletdir)],[])
 
 PKG_CHECK_MODULES(GST, gstreamer-app-1.0 gstreamer-1.0)
 

@@ -4,7 +4,8 @@ Priority: optional
 Maintainer: Markus Koschany <apo@debian.org>
 Build-Depends:
  debhelper-compat (= 13),
- gnome-common,
+ mate-common,
+ libmate-panel-applet-dev,
  libcairo2-dev,
  libglib2.0-dev,
  libgstreamer-plugins-base1.0-dev,

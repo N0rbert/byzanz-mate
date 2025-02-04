@@ -15,11 +15,11 @@ PKG_NAME="Byzanz"
 }
 
 
-which gnome-autogen.sh || {
-    echo "You need to install gnome-common from the GNOME CVS"
+which mate-autogen || {
+    echo "You need to install gnome-common from the MATE CVS"
     exit 1
 }
 REQUIRED_AUTOMAKE_VERSION=1.8 \
 USE_GNOME2_MACROS=1 \
 USE_COMMON_DOC_BUILD=yes \
-. gnome-autogen.sh
+. mate-autogen

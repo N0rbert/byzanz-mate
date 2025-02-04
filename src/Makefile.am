@@ -70,7 +70,7 @@ byzanz_applet_SOURCES = \
 byzanz_applet_CFLAGS = -DBYZANZ_MENU_UI_DIR=\""$(uidir)"\" $(APPLET_CFLAGS)
 byzanz_applet_LDADD = $(APPLET_LIBS) ./libbyzanz.la
 
-gsettings_schemas_in_in = org.gnome.byzanz.applet.gschema.xml.in.in
+gsettings_schemas_in_in = org.mate.byzanz.applet.gschema.xml.in.in
 
 @INTLTOOL_XML_NOMERGE_RULE@
 
@@ -82,8 +82,9 @@ gsettings_SCHEMAS = $(gsettings_schemas_in:.xml.in=.xml)
 
 @GSETTINGS_RULES@
 
-applet_in_files = org.gnome.ByzanzApplet.panel-applet.in
-applet_DATA     = $(applet_in_files:.panel-applet.in=.panel-applet)
+appletdir       = $(datadir)/mate-panel/applets
+applet_in_files = org.mate.ByzanzApplet.mate-panel-applet.in
+applet_DATA     = $(applet_in_files:.mate-panel-applet.in=.mate-panel-applet)
 
 $(applet_in_files): $(applet_in_files).in Makefile
 	sed \
@@ -91,14 +92,24 @@ $(applet_in_files): $(applet_in_files).in Makefile
             -e "s|\@VERSION\@|$(PACKAGE_VERSION)|" \
             $< > $@
 
-%.panel-applet: %.panel-applet.in $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*po) ; $(INTLTOOL_MERGE) $(top_srcdir)/po $< $@ -d -u -c $(top_builddir)/po/.intltool-merge-cache
+%.mate-panel-applet: %.mate-panel-applet.in $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*po) ; $(INTLTOOL_MERGE) $(top_srcdir)/po $< $@ -d -u -c $(top_builddir)/po/.intltool-merge-cache
 
 uidir = $(datadir)/byzanz
 ui_DATA = byzanzapplet.xml
 
+servicedir       = $(datadir)/dbus-1/services
+service_in_files = \
+	org.mate.panel.applet.ByzanzAppletFactory.service.in
+service_DATA     = $(service_in_files:.service.in=.service)
+
+%.service: %.service.in Makefile
+	$(AM_V_GEN)sed \
+	    -e "s|\@LIBEXECDIR\@|$(libexecdir)|" \
+	    $< > $@
+
+
 CLEANFILES = \
 	$(applet_DATA) \
-	$(applet_DATA).in \
 	$(service_DATA) \
 	$(schemas_DATA) \
 	$(gsettings_SCHEMAS_in) \
@@ -106,7 +117,7 @@ CLEANFILES = \
 	*.gschema.valid
 
 EXTRA_DIST = \
-	org.gnome.ByzanzApplet.panel-applet.in.in \
+	org.mate.ByzanzApplet.mate-panel-applet.in.in \
 	$(gsettings_schemas_in_in)	\
 	$(man_MANS) \
 	$(ui_DATA)

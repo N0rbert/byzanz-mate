@@ -39,7 +39,7 @@ msgid "All files"
 msgstr "Tots els fitxers"
 
 #: ../src/byzanzapplet.c:293
-#: ../src/org.gnome.byzanz.applet.gschema.xml.in.in.h:5 ../src/record.c:42
+#: ../src/org.mate.byzanz.applet.gschema.xml.in.in.h:5 ../src/record.c:42
 msgid "Record audio"
 msgstr "Enregistra el so"
 
@@ -127,21 +127,21 @@ msgstr "Aquest enregistrament no s'ha realitzat amb el Byzanz"
 msgid "Unsupported byte order"
 msgstr "L'ordre de bytes no és permès"
 
-#: ../src/org.gnome.byzanz.applet.gschema.xml.in.in.h:1
+#: ../src/org.mate.byzanz.applet.gschema.xml.in.in.h:1
 msgid "Save filename"
 msgstr "Nom del fitxer per al desament"
 
-#: ../src/org.gnome.byzanz.applet.gschema.xml.in.in.h:2
+#: ../src/org.mate.byzanz.applet.gschema.xml.in.in.h:2
 msgid "URI for the filename Byzanz will suggest when starting a recording."
 msgstr ""
 "URI del nom de fitxer que el Byzanz suggerirà quan s'iniciï un "
 "enregistrament.  "
 
-#: ../src/org.gnome.byzanz.applet.gschema.xml.in.in.h:3
+#: ../src/org.mate.byzanz.applet.gschema.xml.in.in.h:3
 msgid "Recording method"
 msgstr "Mètode d'enregistrament"
 
-#: ../src/org.gnome.byzanz.applet.gschema.xml.in.in.h:4
+#: ../src/org.mate.byzanz.applet.gschema.xml.in.in.h:4
 msgid ""
 "Use this method as the default method for recording. Must be one of \"screen"
 "\" for recording the whole screen, \"area\" for selecting an area or \"window"
@@ -151,7 +151,7 @@ msgstr ""
 "«screen» (pantalla) per enregistrar la pantalla completa, «area» (àrea) per "
 "seleccionar una àrea o «window» (finestra) per seleccionar una finestra. "
 
-#: ../src/org.gnome.byzanz.applet.gschema.xml.in.in.h:6
+#: ../src/org.mate.byzanz.applet.gschema.xml.in.in.h:6
 msgid ""
 "If set, Byzanz will record audio from the default audio device if the format "
 "supports it. This allows narrating along with the recording."
